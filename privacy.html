@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Parker Wellness, PLLC</title>
+  <meta name="robots" content="index, follow" />
+  <style>
+    :root{--bg:#070b16;--text:rgba(255,255,255,.92);--muted:rgba(255,255,255,.72);--border:rgba(255,255,255,.14);--shadow:0 22px 70px rgba(0,0,0,.42);}
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(1100px 800px at 18% 10%, rgba(96,165,250,0.18), transparent 60%),radial-gradient(900px 650px at 85% 25%, rgba(167,139,250,0.14), transparent 55%),var(--bg);color:var(--text);line-height:1.6;}
+    a{color:inherit;text-decoration:none;} a:hover{text-decoration:underline;text-underline-offset:3px;}
+    .wrap{max-width:900px;margin:0 auto;padding:34px 18px 80px;}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;color:rgba(255,255,255,.78);font-size:13px;}
+    .btn{padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);}
+    .btn:hover{background:rgba(255,255,255,.07);text-decoration:none;}
+    .card{padding:22px;border-radius:24px;background:rgba(255,255,255,.06);border:1px solid var(--border);box-shadow:var(--shadow);}
+    h1{margin:0 0 10px;font-size:22px;}
+    h2{margin:18px 0 8px;font-size:16px;}
+    p,li{color:var(--muted);font-size:14.5px;}
+    ul{padding-left:18px;margin:8px 0;}
+    .muted{color:rgba(255,255,255,.58);font-size:12.5px;margin-top:16px;}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:13px;color:rgba(255,255,255,.82);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="btn" href="index.html">← Home</a>
+      <span>Parker Wellness, PLLC</span>
+    </div>
+
+    <div class="card">
+      <h1>Privacy Policy</h1>
+      <p class="muted">Last updated: <span id="date"></span></p>
+
+      <p>
+        Parker Wellness, PLLC (“we,” “our,” or “us”) develops and operates Hospital Hub (SugarLand Brain)
+        (“the App”). This Privacy Policy describes how we handle information in connection with the App and this website.
+      </p>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>The App is intended for authorized users and may be configured with organizational access controls.</li>
+        <li>We aim to collect only what is needed to provide core app functionality and support.</li>
+        <li>We do not want sensitive patient information sent to support email.</li>
+      </ul>
+
+      <h2>Information we may collect</h2>
+      <ul>
+        <li><strong>Account and authentication data:</strong> such as identifiers used for sign-in and authorization (e.g., user ID, email, role).</li>
+        <li><strong>App content you provide:</strong> such as notes, to-do items, documents you upload/manage (depending on your access level), and messages/updates you post.</li>
+        <li><strong>Usage and diagnostics:</strong> basic logs and crash/diagnostic data to maintain reliability and troubleshoot issues.</li>
+      </ul>
+
+      <h2>How we use information</h2>
+      <ul>
+        <li>Provide and maintain app functionality (authentication, access control, document access, directories, communications).</li>
+        <li>Improve reliability, performance, and user experience.</li>
+        <li>Provide support and respond to inquiries.</li>
+        <li>Protect security and prevent misuse.</li>
+      </ul>
+
+      <h2>AI document Q&amp;A</h2>
+      <p>
+        The App includes an AI-assisted Q&amp;A feature designed to surface answers from internal MHSL documents with source context.
+        The feature is intended to support information retrieval from authorized content.
+      </p>
+      <ul>
+        <li>Users should not input sensitive patient-identifying information into prompts.</li>
+        <li>Outputs are informational and should be validated by clinical judgment and local policy.</li>
+      </ul>
+
+      <h2>Sharing and access</h2>
+      <p>
+        Access to content may be restricted based on role-based and administrative controls. Shared documents and team resources are intended
+        for authorized users within the configured organization/team environment.
+      </p>
+
+      <h2>Data retention</h2>
+      <p>
+        Retention may vary by organization configuration and feature use. We retain information as needed to provide the service,
+        comply with legal obligations, resolve disputes, and enforce agreements.
+      </p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li>You can request support or account-related assistance via the <a href="contact.html">Contact</a> page.</li>
+        <li>Where applicable, administrators may manage access, content availability, and organization settings.</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>
+        For support inquiries, use our <a href="contact.html">Contact</a> page. Please do not email sensitive patient information.
+      </p>
+
+      <p class="muted">
+        This policy may be updated periodically. Continued use of the App after changes indicates acceptance of the updated policy.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const d = new Date();
+    document.getElementById("date").textContent = d.toLocaleDateString(undefined, { year:"numeric", month:"long", day:"numeric" });
+  </script>
+</body>
+</html>
