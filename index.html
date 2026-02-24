@@ -49,7 +49,15 @@
       box-shadow: 0 18px 35px rgba(0,0,0,0.35);
       flex: 0 0 auto;
     }
-    .brand h1 {
+    .logo{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  object-fit: contain;
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.35);
+  background: rgba(255,255,255,0.02);
+}    .brand h1 {
       margin: 0; font-size: 15px; font-weight: 680; letter-spacing: 0.2px;
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
@@ -248,7 +256,7 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <div class="mark" aria-hidden="true"></div>
+        <img class="logo" src="assets/logo.png" alt="Hospital Hub logo" />
         <div>
           <h1>Parker Wellness, PLLC</h1>
           <p>Healthcare workflow tools & clinical operations software</p>
