@@ -3,100 +3,405 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — Parker Wellness, PLLC</title>
+  <title>Parker Wellness, PLLC</title>
+  <meta name="description" content="Parker Wellness, PLLC develops Hospital Hub (SugarLand Brain), a secure clinical operations workspace for the MHSL Emergency Medicine team." />
+  <meta name="robots" content="index, follow" />
   <style>
-    :root{--bg:#070B14;--text:rgba(255,255,255,.92);--muted:rgba(255,255,255,.72);--border:rgba(255,255,255,.12);--shadow:0 24px 70px rgba(0,0,0,.45);--panel:rgba(255,255,255,.06);--r:22px}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(1100px 800px at 15% 10%, rgba(56,189,248,.14), transparent 60%),radial-gradient(900px 700px at 85% 30%, rgba(167,139,250,.12), transparent 55%),var(--bg);color:var(--text);line-height:1.6}
-    a{color:inherit}
-    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 70px}
-    .top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;color:rgba(255,255,255,.74);font-size:13px}
-    .btn{padding:10px 12px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.04);text-decoration:none}
-    .btn:hover{background:rgba(255,255,255,.065)}
-    .card{padding:26px;border-radius:var(--r);background:var(--panel);border:1px solid var(--border);box-shadow:var(--shadow)}
-    h1{margin:0 0 6px;font-size:22px}
-    .meta{margin:0 0 18px;color:rgba(255,255,255,.62);font-size:13px}
-    h2{margin:22px 0 10px;font-size:16px}
-    p,li{color:var(--muted);font-size:14.8px}
-    ul{margin:10px 0 0;padding-left:18px}
-    .note{margin-top:16px;color:rgba(255,255,255,.6);font-size:12.8px}
-    strong{color:rgba(255,255,255,.86)}
+    :root {
+      --bg: #070b16;
+      --panel: rgba(255,255,255,0.06);
+      --panel2: rgba(255,255,255,0.08);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --muted2: rgba(255,255,255,0.56);
+      --border: rgba(255,255,255,0.14);
+      --shadow: 0 22px 70px rgba(0,0,0,0.42);
+      --shadow2: 0 10px 30px rgba(0,0,0,0.35);
+      --accent: rgba(96,165,250,1);
+      --accent2: rgba(167,139,250,1);
+      --good: rgba(34,197,94,1);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(1100px 800px at 18% 10%, rgba(96,165,250,0.22), transparent 60%),
+        radial-gradient(900px 650px at 85% 25%, rgba(167,139,250,0.18), transparent 55%),
+        radial-gradient(900px 750px at 55% 95%, rgba(34,197,94,0.12), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 34px 18px 80px; }
+    header {
+      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      margin-bottom: 26px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .mark {
+      width: 44px; height: 44px; border-radius: 14px;
+      background: linear-gradient(135deg, rgba(96,165,250,0.95), rgba(167,139,250,0.90));
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 18px 35px rgba(0,0,0,0.35);
+      flex: 0 0 auto;
+    }
+    .brand h1 {
+      margin: 0; font-size: 15px; font-weight: 680; letter-spacing: 0.2px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .brand p {
+      margin: 2px 0 0; font-size: 12.5px; color: var(--muted);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    nav { display: flex; gap: 10px; color: var(--muted); font-size: 13px; flex-wrap: wrap; justify-content: flex-end; }
+    nav a {
+      padding: 10px 12px; border-radius: 12px; border: 1px solid transparent;
+      background: rgba(255,255,255,0.02);
+    }
+    nav a:hover {
+      border-color: var(--border);
+      background: rgba(255,255,255,0.05);
+      text-decoration: none;
+    }
+
+    .hero {
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(900px 360px at 18% 10%, rgba(96,165,250,0.28), transparent 55%),
+        radial-gradient(820px 320px at 88% 20%, rgba(167,139,250,0.22), transparent 55%);
+      opacity: 0.8;
+      pointer-events:none;
+    }
+    .hero-inner {
+      position: relative;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 16px;
+      align-items: start;
+    }
+    @media (max-width: 900px){ .hero-inner { grid-template-columns: 1fr; } }
+
+    .kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      font-size: 12px;
+      width: fit-content;
+      margin-bottom: 12px;
+    }
+    .dot{
+      width: 7px; height: 7px; border-radius: 99px;
+      background: var(--good);
+      box-shadow: 0 0 0 6px rgba(34,197,94,0.12);
+    }
+
+    .hero h2 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      letter-spacing: -0.3px;
+      line-height: 1.12;
+    }
+    .hero .sub { margin: 0; color: var(--muted); font-size: 16px; max-width: 65ch; }
+
+    .pillrow { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .pill {
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      color: rgba(255,255,255,0.80);
+      font-size: 13px;
+    }
+
+    .verify {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      box-shadow: var(--shadow2);
+    }
+    .verify h3 { margin: 0 0 10px; font-size: 14px; letter-spacing: 0.2px; }
+    .meta { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .meta li{
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .meta strong{ color: rgba(255,255,255,0.88); font-weight: 650; }
+
+    .grid {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 900px){ .grid { grid-template-columns: 1fr; } }
+
+    .card {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+    }
+    .card h3 { margin: 0 0 8px; font-size: 15px; letter-spacing: 0.1px; }
+    .card p, .card li { margin: 0; color: var(--muted); font-size: 14.5px; }
+    .card ul { margin: 10px 0 0; padding-left: 18px; }
+
+    section {
+      margin-top: 18px;
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+    }
+    section h3 { margin: 0 0 10px; font-size: 16px; }
+    section p, section li { color: var(--muted); font-size: 14.5px; }
+    ul { padding-left: 18px; }
+
+    /* Product mockup frame (pure CSS) */
+    .mock {
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      overflow: hidden;
+      box-shadow: var(--shadow2);
+    }
+    .mock-top {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 14px;
+      background: rgba(255,255,255,0.04);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      color: rgba(255,255,255,0.78);
+      font-size: 12.5px;
+    }
+    .lights { display:flex; gap:8px; align-items:center; }
+    .light { width:10px; height:10px; border-radius:99px; background: rgba(255,255,255,0.18); }
+    .mock-body {
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      min-height: 190px;
+    }
+    @media (max-width: 900px){ .mock-body { grid-template-columns: 1fr; } }
+    .tile {
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      padding: 14px;
+    }
+    .tile .t { font-size: 13px; color: rgba(255,255,255,0.86); margin-bottom: 6px; font-weight: 650; }
+    .tile .d { font-size: 12.5px; color: var(--muted); }
+    .tag {
+      display:inline-flex; align-items:center; gap:8px;
+      margin-top: 10px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.74);
+    }
+    .chip{
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+    }
+
+    footer {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 0 6px;
+      color: var(--muted2);
+      font-size: 12.5px;
+    }
+    footer a {
+      color: var(--muted2);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.16);
+    }
+    footer a:hover { color: var(--text); border-bottom-color: rgba(255,255,255,0.32); }
   </style>
 </head>
+
 <body>
   <div class="wrap">
-    <div class="top">
-      <a class="btn" href="index.html">← Home</a>
-      <span>Parker Wellness, PLLC</span>
+    <header>
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>Parker Wellness, PLLC</h1>
+          <p>Healthcare workflow tools & clinical operations software</p>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation">
+        <a href="#product">Hospital Hub</a>
+        <a href="#features">Key Features</a>
+        <a href="#verification">Verification</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </header>
+
+    <div class="hero" id="top">
+      <div class="hero-inner">
+        <div>
+          <div class="kicker"><span class="dot" aria-hidden="true"></span> Built for fast-paced clinical operations</div>
+          <h2>Secure, mobile-first software that keeps clinical teams aligned.</h2>
+          <p class="sub">
+            Parker Wellness, PLLC develops tools designed to centralize critical documents, directories,
+            updates, and workflow utilities—so clinicians can move fast when minutes matter.
+          </p>
+
+          <div class="pillrow" aria-label="Highlights">
+            <div class="pill">Role-based access</div>
+            <div class="pill">Documents + search</div>
+            <div class="pill">Directories</div>
+            <div class="pill">AI document Q&amp;A</div>
+            <div class="pill">Notes + to-do</div>
+            <div class="pill">Subscription support</div>
+          </div>
+        </div>
+
+        <aside class="verify" id="verification">
+          <h3>Business & developer verification</h3>
+          <ul class="meta">
+            <li><strong>Legal entity:</strong> Parker Wellness, PLLC</li>
+            <li><strong>Location:</strong> Houston, Texas, USA</li>
+            <li><strong>Product:</strong> Hospital Hub (SugarLand Brain)</li>
+            <li><strong>Support:</strong> <a href="contact.html">Contact</a></li>
+            <li><strong>Privacy Policy:</strong> <a href="privacy.html">View policy</a></li>
+          </ul>
+        </aside>
+      </div>
     </div>
 
-    <div class="card">
-      <h1>Privacy Policy</h1>
-      <p class="meta">Last updated: <span id="d"></span></p>
-
+    <section id="product">
+      <h3>Hospital Hub (SugarLand Brain)</h3>
       <p>
-        Parker Wellness, PLLC (“<strong>Parker Wellness</strong>,” “<strong>we</strong>,” “<strong>us</strong>”) develops Hospital Hub,
-        a secure workspace for clinical operations. This Privacy Policy describes how we handle information when you use our products and services.
+        Hospital Hub is the all-in-one workspace for the MHSL Emergency Medicine team.
+        Built for fast-paced clinical operations, it brings team communication, critical documents,
+        contact directories, and daily workflow tools into one secure app.
+      </p>
+      <p>
+        With Hospital Hub, your team can quickly access protocols and guidelines, browse and manage shared documents,
+        post updates, and find physicians, APPs, and consultant contacts when minutes matter.
+      </p>
+      <p>
+        The app also includes an AI-powered Q&amp;A assistant that helps surface answers from your internal MHSL documents
+        with source context, plus personal tools like notes and to-do tracking to stay organized during shifts.
       </p>
 
-      <h2>1. Information we may process</h2>
+      <div class="mock" aria-label="Product preview mockup">
+        <div class="mock-top">
+          <div class="lights" aria-hidden="true">
+            <div class="light"></div><div class="light"></div><div class="light"></div>
+          </div>
+          <div>Hospital Hub — Tile Dashboard</div>
+          <div style="opacity:.8;">Secure • Fast • Organized</div>
+        </div>
+        <div class="mock-body">
+          <div class="tile">
+            <div class="t">Protocols &amp; Guidelines</div>
+            <div class="d">Quick access to team standards and clinical references.</div>
+            <div class="tag"><span class="chip">Search</span><span class="chip">Pinned docs</span></div>
+          </div>
+          <div class="tile">
+            <div class="t">Shared Documents</div>
+            <div class="d">Browse and manage team files in one place.</div>
+            <div class="tag"><span class="chip">Organized</span><span class="chip">Controlled access</span></div>
+          </div>
+          <div class="tile">
+            <div class="t">Directories</div>
+            <div class="d">Physicians, APPs, and consultants—fast when time matters.</div>
+            <div class="tag"><span class="chip">Call-ready</span><span class="chip">Always available</span></div>
+          </div>
+          <div class="tile">
+            <div class="t">AI Document Q&amp;A</div>
+            <div class="d">Answers surfaced from internal MHSL documents with source context.</div>
+            <div class="tag"><span class="chip">Source-backed</span><span class="chip">Fast lookup</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h3>Key features</h3>
+      <div class="grid">
+        <div class="card">
+          <h3>Clinical operations</h3>
+          <ul>
+            <li>Home-tile dashboard for rapid access to team resources</li>
+            <li>Shared document library with search and organization</li>
+            <li>Team notifications and communication tools</li>
+            <li>Physician/APP and consultant directories</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Intelligence + personal tools</h3>
+          <ul>
+            <li>AI document Q&amp;A with source-backed responses</li>
+            <li>Personal notes and to-do tools</li>
+            <li>Secure sign-in with role-based/admin controls</li>
+            <li>Subscription support for premium access</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:12px;">
+        Designed specifically for MHSL clinicians and staff, Hospital Hub helps keep everyone aligned,
+        informed, and ready to deliver care.
+      </p>
+    </section>
+
+    <section id="security">
+      <h3>Privacy & security posture</h3>
+      <p>
+        Parker Wellness, PLLC develops healthcare workflow tools with an emphasis on secure access,
+        responsible handling of information, and organizational controls appropriate for clinical environments.
+      </p>
       <ul>
-        <li><strong>Account and authentication data:</strong> identifiers used for secure sign-in, role-based access, and account management.</li>
-        <li><strong>App content and usage data:</strong> content you upload or create in the app (e.g., notes, documents, posts), and feature usage needed to operate the service.</li>
-        <li><strong>Device and technical data:</strong> basic device identifiers, diagnostic information, and logs used to maintain performance and security.</li>
+        <li>Access may be restricted via role-based controls, administrative settings, and/or team access rules.</li>
+        <li>Shared content is intended for authorized users.</li>
+        <li>For support inquiries, please use the Contact page.</li>
       </ul>
-
-      <h2>2. How we use information</h2>
-      <ul>
-        <li>Provide, operate, and maintain the app’s core features (documents, directories, updates, notes, to-dos, and related tools).</li>
-        <li>Enable secure access controls (role-based/admin controls) and protect the integrity of team resources.</li>
-        <li>Improve reliability, diagnose issues, and support users.</li>
-        <li>Provide subscription functionality where enabled.</li>
-      </ul>
-
-      <h2>3. AI document Q&amp;A</h2>
-      <p>
-        Hospital Hub may include an AI-powered assistant designed to surface answers from internal documents with source-backed context.
-        The assistant is intended to support retrieval of internal operational knowledge.
+      <p style="margin-top:10px;">
+        Read the full <a href="privacy.html">Privacy Policy</a>.
       </p>
-      <ul>
-        <li>AI features may process user-provided queries and relevant document excerpts to generate responses.</li>
-        <li>Availability and configuration may vary by deployment and organizational settings.</li>
-      </ul>
+    </section>
 
-      <h2>4. Sharing and access</h2>
-      <p>
-        Access to app content may be restricted to authorized users within an organization, based on roles and administrative controls.
-        We do not sell personal information.
-      </p>
-
-      <h2>5. Security</h2>
-      <p>
-        We implement administrative controls and technical safeguards appropriate for software used in clinical environments.
-        No system can be guaranteed 100% secure, but we work to protect confidentiality and integrity.
-      </p>
-
-      <h2>6. Data retention</h2>
-      <p>
-        Retention practices can vary depending on organizational settings and deployment configuration.
-        We retain information as needed to provide the service and comply with applicable requirements.
-      </p>
-
-      <h2>7. Contact</h2>
-      <p>
-        For privacy questions or requests, please use our <a href="support.html">Support</a> page.
-      </p>
-
-      <p class="note">
-        Do not submit sensitive patient information through support email or website contact channels.
-      </p>
-    </div>
+    <footer>
+      <div>© <span id="year"></span> Parker Wellness, PLLC</div>
+      <div>
+        <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+        <a href="terms.html">Terms</a> &nbsp;·&nbsp;
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
   </div>
 
   <script>
-    const d = new Date();
-    const opts = { year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('d').textContent = d.toLocaleDateString(undefined, opts);
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
