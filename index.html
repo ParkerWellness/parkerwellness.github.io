@@ -6,6 +6,7 @@
   <title>Parker Wellness, PLLC</title>
   <meta name="description" content="Parker Wellness, PLLC develops Hospital Hub, a secure clinical operations workspace for the MHSL Emergency Medicine team." />
   <meta name="robots" content="index, follow" />
+
   <style>
     :root {
       --bg: #070b16;
@@ -21,7 +22,9 @@
       --accent2: rgba(167,139,250,1);
       --good: rgba(34,197,94,1);
     }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -33,43 +36,79 @@
       color: var(--text);
       line-height: 1.55;
     }
+
     a { color: inherit; text-decoration: none; }
     a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
     .wrap { max-width: 1040px; margin: 0 auto; padding: 34px 18px 80px; }
+
     header {
-      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
       margin-bottom: 26px;
     }
+
     .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+
+    /* (Kept for reference; not used if you use the image logo) */
     .mark {
-      width: 44px; height: 44px; border-radius: 14px;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
       background: linear-gradient(135deg, rgba(96,165,250,0.95), rgba(167,139,250,0.90));
       border: 1px solid rgba(255,255,255,0.16);
       box-shadow: 0 18px 35px rgba(0,0,0,0.35);
       flex: 0 0 auto;
     }
+
     .logo{
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  object-fit: contain;
-  border: 1px solid rgba(255,255,255,0.16);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.35);
-  background: rgba(255,255,255,0.02);
-}    .brand h1 {
-      margin: 0; font-size: 15px; font-weight: 680; letter-spacing: 0.2px;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      object-fit: contain;
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 18px 35px rgba(0,0,0,0.35);
+      background: rgba(255,255,255,0.02);
+      flex: 0 0 auto;
     }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 680;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     .brand p {
-      margin: 2px 0 0; font-size: 12.5px; color: var(--muted);
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      margin: 2px 0 0;
+      font-size: 12.5px;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    nav { display: flex; gap: 10px; color: var(--muted); font-size: 13px; flex-wrap: wrap; justify-content: flex-end; }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
     nav a {
-      padding: 10px 12px; border-radius: 12px; border: 1px solid transparent;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid transparent;
       background: rgba(255,255,255,0.02);
     }
+
     nav a:hover {
       border-color: var(--border);
       background: rgba(255,255,255,0.05);
@@ -84,15 +123,18 @@
       overflow: hidden;
       position: relative;
     }
+
     .hero::before{
       content:"";
-      position:absolute; inset:-2px;
+      position:absolute;
+      inset:-2px;
       background:
         radial-gradient(900px 360px at 18% 10%, rgba(96,165,250,0.28), transparent 55%),
         radial-gradient(820px 320px at 88% 20%, rgba(167,139,250,0.22), transparent 55%);
       opacity: 0.8;
       pointer-events:none;
     }
+
     .hero-inner {
       position: relative;
       padding: 28px;
@@ -101,10 +143,15 @@
       gap: 16px;
       align-items: start;
     }
-    @media (max-width: 900px){ .hero-inner { grid-template-columns: 1fr; } }
+
+    @media (max-width: 900px){
+      .hero-inner { grid-template-columns: 1fr; }
+    }
 
     .kicker {
-      display: inline-flex; align-items: center; gap: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       padding: 8px 10px;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,0.14);
@@ -114,8 +161,11 @@
       width: fit-content;
       margin-bottom: 12px;
     }
+
     .dot{
-      width: 7px; height: 7px; border-radius: 99px;
+      width: 7px;
+      height: 7px;
+      border-radius: 99px;
       background: var(--good);
       box-shadow: 0 0 0 6px rgba(34,197,94,0.12);
     }
@@ -126,9 +176,16 @@
       letter-spacing: -0.3px;
       line-height: 1.12;
     }
-    .hero .sub { margin: 0; color: var(--muted); font-size: 16px; max-width: 65ch; }
+
+    .hero .sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 65ch;
+    }
 
     .pillrow { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; }
+
     .pill {
       padding: 10px 12px;
       border-radius: 999px;
@@ -145,8 +202,15 @@
       background: rgba(255,255,255,0.05);
       box-shadow: var(--shadow2);
     }
-    .verify h3 { margin: 0 0 10px; font-size: 14px; letter-spacing: 0.2px; }
+
+    .verify h3 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+    }
+
     .meta { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+
     .meta li{
       padding: 10px 12px;
       border-radius: 14px;
@@ -155,6 +219,7 @@
       color: var(--muted);
       font-size: 13px;
     }
+
     .meta strong{ color: rgba(255,255,255,0.88); font-weight: 650; }
 
     .grid {
@@ -163,7 +228,10 @@
       grid-template-columns: 1fr 1fr;
       gap: 14px;
     }
-    @media (max-width: 900px){ .grid { grid-template-columns: 1fr; } }
+
+    @media (max-width: 900px){
+      .grid { grid-template-columns: 1fr; }
+    }
 
     .card {
       padding: 18px;
@@ -171,6 +239,7 @@
       background: rgba(255,255,255,0.04);
       border: 1px solid var(--border);
     }
+
     .card h3 { margin: 0 0 8px; font-size: 15px; letter-spacing: 0.1px; }
     .card p, .card li { margin: 0; color: var(--muted); font-size: 14.5px; }
     .card ul { margin: 10px 0 0; padding-left: 18px; }
@@ -182,11 +251,11 @@
       background: rgba(255,255,255,0.04);
       border: 1px solid var(--border);
     }
+
     section h3 { margin: 0 0 10px; font-size: 16px; }
     section p, section li { color: var(--muted); font-size: 14.5px; }
     ul { padding-left: 18px; }
 
-    /* Product mockup frame (pure CSS) */
     .mock {
       border-radius: 24px;
       border: 1px solid rgba(255,255,255,0.14);
@@ -194,16 +263,21 @@
       overflow: hidden;
       box-shadow: var(--shadow2);
     }
+
     .mock-top {
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       padding: 12px 14px;
       background: rgba(255,255,255,0.04);
       border-bottom: 1px solid rgba(255,255,255,0.10);
       color: rgba(255,255,255,0.78);
       font-size: 12.5px;
     }
+
     .lights { display:flex; gap:8px; align-items:center; }
     .light { width:10px; height:10px; border-radius:99px; background: rgba(255,255,255,0.18); }
+
     .mock-body {
       padding: 16px;
       display: grid;
@@ -211,21 +285,30 @@
       gap: 12px;
       min-height: 190px;
     }
-    @media (max-width: 900px){ .mock-body { grid-template-columns: 1fr; } }
+
+    @media (max-width: 900px){
+      .mock-body { grid-template-columns: 1fr; }
+    }
+
     .tile {
       border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.12);
       background: rgba(255,255,255,0.04);
       padding: 14px;
     }
+
     .tile .t { font-size: 13px; color: rgba(255,255,255,0.86); margin-bottom: 6px; font-weight: 650; }
     .tile .d { font-size: 12.5px; color: var(--muted); }
+
     .tag {
-      display:inline-flex; align-items:center; gap:8px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
       margin-top: 10px;
       font-size: 12px;
       color: rgba(255,255,255,0.74);
     }
+
     .chip{
       padding: 6px 10px;
       border-radius: 999px;
@@ -243,11 +326,13 @@
       color: var(--muted2);
       font-size: 12.5px;
     }
+
     footer a {
       color: var(--muted2);
       text-decoration: none;
       border-bottom: 1px solid rgba(255,255,255,0.16);
     }
+
     footer a:hover { color: var(--text); border-bottom-color: rgba(255,255,255,0.32); }
   </style>
 </head>
