@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Use — Parker Wellness, PLLC</title>
+  <meta name="robots" content="index, follow" />
+  <style>
+    :root{--bg:#070b16;--text:rgba(255,255,255,.92);--muted:rgba(255,255,255,.72);--border:rgba(255,255,255,.14);--shadow:0 22px 70px rgba(0,0,0,.42);}
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(1100px 800px at 18% 10%, rgba(96,165,250,0.18), transparent 60%),radial-gradient(900px 650px at 85% 25%, rgba(167,139,250,0.14), transparent 55%),var(--bg);color:var(--text);line-height:1.6;}
+    a{color:inherit;text-decoration:none;} a:hover{text-decoration:underline;text-underline-offset:3px;}
+    .wrap{max-width:900px;margin:0 auto;padding:34px 18px 80px;}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;color:rgba(255,255,255,.78);font-size:13px;}
+    .btn{padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);}
+    .btn:hover{background:rgba(255,255,255,.07);text-decoration:none;}
+    .card{padding:22px;border-radius:24px;background:rgba(255,255,255,.06);border:1px solid var(--border);box-shadow:var(--shadow);}
+    h1{margin:0 0 10px;font-size:22px;}
+    h2{margin:18px 0 8px;font-size:16px;}
+    p,li{color:var(--muted);font-size:14.5px;}
+    ul{padding-left:18px;margin:8px 0;}
+    .muted{color:rgba(255,255,255,.58);font-size:12.5px;margin-top:16px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="btn" href="index.html">← Home</a>
+      <span>Parker Wellness, PLLC</span>
+    </div>
+
+    <div class="card">
+      <h1>Terms of Use</h1>
+      <p class="muted">Last updated: <span id="date"></span></p>
+
+      <p>
+        These Terms of Use (“Terms”) govern your use of Hospital Hub (SugarLand Brain) (“the App”) and this website,
+        operated by Parker Wellness, PLLC (“we,” “our,” or “us”). By accessing or using the App, you agree to these Terms.
+      </p>
+
+      <h2>Authorized use</h2>
+      <ul>
+        <li>The App is intended for authorized users associated with the configured clinical team/organization.</li>
+        <li>You agree not to attempt to access accounts, data, or systems you are not authorized to use.</li>
+      </ul>
+
+      <h2>Clinical use disclaimer</h2>
+      <ul>
+        <li>The App supports workflow and information access but does not provide medical advice.</li>
+        <li>Clinical decisions remain the responsibility of licensed clinicians and must follow local policy and judgment.</li>
+      </ul>
+
+      <h2>AI-assisted features</h2>
+      <ul>
+        <li>AI document Q&amp;A is intended to help retrieve information from internal documents with source context.</li>
+        <li>Do not enter sensitive patient-identifying information into AI prompts.</li>
+        <li>AI outputs may be incomplete or incorrect and must be verified.</li>
+      </ul>
+
+      <h2>Content and acceptable use</h2>
+      <ul>
+        <li>You are responsible for content you create or upload (where permitted).</li>
+        <li>You agree not to upload unlawful, malicious, or unauthorized confidential information.</li>
+      </ul>
+
+      <h2>Subscriptions</h2>
+      <p>
+        Certain features may require a subscription. Subscription terms, pricing, renewal, and cancellation
+        are governed by the applicable app store policies and your subscription settings.
+      </p>
+
+      <h2>Termination</h2>
+      <p>
+        Access may be suspended or terminated for violations of these Terms, security concerns, or administrative decisions
+        within the organization configuration.
+      </p>
+
+      <h2>Limitation of liability</h2>
+      <p>
+        To the fullest extent permitted by law, Parker Wellness, PLLC is not liable for indirect, incidental, special,
+        consequential, or punitive damages, or any loss of data, revenue, or goodwill arising from use of the App.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For support, use the <a href="contact.html">Contact</a> page.
+      </p>
+
+      <p class="muted">
+        We may update these Terms periodically. Continued use after updates indicates acceptance of the revised Terms.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const d = new Date();
+    document.getElementById("date").textContent = d.toLocaleDateString(undefined, { year:"numeric", month:"long", day:"numeric" });
+  </script>
+</body>
+</html>
