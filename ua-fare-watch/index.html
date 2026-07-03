@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UA Fare Watch — Parker Wellness</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Private UA Fare Watch test launcher." />
+  <style>
+    :root {
+      --bg: #070b16;
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --border: rgba(255,255,255,.14);
+      --shadow: 0 22px 70px rgba(0,0,0,.42);
+      --accent: rgba(96,165,250,1);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(1100px 800px at 18% 10%, rgba(96,165,250,.20), transparent 60%),
+        radial-gradient(900px 650px at 85% 25%, rgba(167,139,250,.14), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 34px 18px 80px; }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+      color: rgba(255,255,255,.78);
+      font-size: 13px;
+    }
+    .home {
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+    }
+    .home:hover { background: rgba(255,255,255,.07); }
+    .card {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 99px;
+      background: #22c55e;
+      box-shadow: 0 0 0 6px rgba(34,197,94,.12);
+    }
+    h1 { margin: 0 0 10px; font-size: clamp(28px, 6vw, 44px); line-height: 1.05; }
+    p { color: var(--muted); font-size: 15px; margin: 0 0 16px; max-width: 66ch; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: var(--accent);
+      color: #07111f;
+      font-weight: 700;
+    }
+    .button.secondary {
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+    }
+    .note {
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color: rgba(255,255,255,.68);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="home" href="/">Home</a>
+      <span>Parker Wellness, PLLC</span>
+    </div>
+
+    <main class="card">
+      <div class="kicker"><span class="dot"></span><span>Private testing link</span></div>
+      <h1>UA Fare Watch</h1>
+      <p>
+        This launcher opens the private UA Fare Watch test instance running on the Parker server.
+        The app is protected by a temporary access prompt before the app setup screen appears.
+      </p>
+      <p>
+        Use the access credentials shared privately for this test. Do not enter a United password,
+        payment card, or booking confirmation number.
+      </p>
+      <div class="actions">
+        <a class="button" href="https://prototype-availability-floating-mining.trycloudflare.com/">Open UA Fare Watch</a>
+        <a class="button secondary" href="https://prototype-availability-floating-mining.trycloudflare.com/api/health/ready">Check Status</a>
+      </div>
+      <div class="note">
+        This test link uses a temporary Cloudflare tunnel. If the tunnel is restarted, the launcher
+        may need to be updated with a new target URL.
+      </div>
+    </main>
+  </div>
+</body>
+</html>
